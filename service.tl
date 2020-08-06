@@ -2,6 +2,7 @@ import(hello, src.main, 1);
 
 
 fn background () {
+   print("starting background task...");
    sleep(5);
    print("done");
 }
