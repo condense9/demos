@@ -6,7 +6,8 @@ authors = ["Ric da Silva <2575243+rmhsilva@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-teal-lang = {path = "../../../dev/c9c"}
+# teal-lang = {path = "../../../dev/c9c"}
+teal-lang = "^0.4.2"
 
 [tool.poetry.dev-dependencies]
 
