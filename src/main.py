@@ -1,3 +1,4 @@
+import json
 import time
 
 EXECUTION_TIME = 0.5  # Fake long computation.
@@ -35,5 +36,6 @@ def badness():
     raise ValueError
 
 
-def hello(name):
+def hello(event):
+    name = json.loads(event["body"])["name"]
     return f"Hello, {name}!"

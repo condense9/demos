@@ -7,9 +7,10 @@ fn background () {
 }
 
 
-fn on_http(method, path, body, lambda_event) {
+fn on_http(method, path, event) {
+  print(path);
   if path == "/hello" {
-    hello(get(body, "name"))
+    hello(event);
   }
   else if path == "/compute" {
     print("starting");
@@ -18,12 +19,12 @@ fn on_http(method, path, body, lambda_event) {
     {"session_id": sid()};
   }
   else {
-    signal("error", "bad path")
+    signal("error", "bad path");
   }
 }
 
 fn main() {
-  on_http("POST", "/compute", {"name": "World"}, {})
+  on_http("POST", "/hello", {"body": {"name": "World"}})
 }
 
 // curl --data '{"name": "World"}' -H "Content-Type:application/json" $API
