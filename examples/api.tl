@@ -1,9 +1,12 @@
+// demo: API endpoints and background tasks
+
 import(hello, src.main, 1);
 
 
 fn background () {
-   sleep(5);
-   print("done");
+  print("starting background task...");
+  sleep(5);
+  print("done");
 }
 
 

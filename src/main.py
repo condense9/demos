@@ -1,3 +1,4 @@
+"""Our computation library"""
 import json
 import time
 

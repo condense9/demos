@@ -1,3 +1,5 @@
+// demo: parallel computation and conditional branching
+
 import(f, src.main, 1);
 import(g, src.main, 1);
 import(h, src.main, 1);
